@@ -26,6 +26,11 @@ namespace :db do
     require_relative './db/seeds'
   end
   
+  desc 'connection to environment.rb'
+  task :environment do
+    require_relative './config/environment'
+  end
+  
   desc 'open Pry console'
   task :console => :environment do
     Pry.start
